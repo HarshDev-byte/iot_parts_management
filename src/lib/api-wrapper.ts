@@ -8,8 +8,7 @@ import { z } from 'zod'
 import { withRateLimit, RateLimiter, rateLimiters } from './rate-limit'
 import { formatValidationErrors } from './validation'
 import { logError, logWarn } from './logger'
-import { getServerSession } from 'next-auth'
-import { authOptions } from './auth'
+import { auth } from './auth'
 
 interface ApiHandlerOptions {
   rateLimit?: RateLimiter | false
@@ -52,7 +51,7 @@ export function createApiHandler(
       // 2. Authentication
       let session = null
       if (options.requireAuth) {
-        session = await getServerSession(authOptions)
+        session = await auth()
         if (!session) {
           return NextResponse.json(
             { error: 'Unauthorized', message: 'Authentication required' },

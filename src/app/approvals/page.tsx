@@ -23,6 +23,9 @@ import { useRequests } from '@/lib/hooks/use-requests'
 import { useUpdateRequestMutation } from '@/lib/hooks/use-mutation-factory'
 import { formatDate, formatDateTime } from '@/lib/utils'
 
+// Force dynamic rendering
+export const dynamic = 'force-dynamic'
+
 export default function ApprovalsPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedRequest, setSelectedRequest] = useState<string | null>(null)

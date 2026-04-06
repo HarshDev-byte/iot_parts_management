@@ -106,7 +106,9 @@ function cacheResponse(cacheKey: string, data: any): void {
   // Clean up old cache entries (keep last 100)
   if (responseCache.size > 100) {
     const firstKey = responseCache.keys().next().value
-    responseCache.delete(firstKey)
+    if (firstKey !== undefined) {
+      responseCache.delete(firstKey)
+    }
   }
 }
 

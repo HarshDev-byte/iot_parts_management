@@ -185,10 +185,10 @@ export async function withRateLimit(
 export function startRateLimitCleanup(intervalMs: number = 60000): NodeJS.Timeout {
   return setInterval(() => {
     const now = Date.now()
-    for (const [key, record] of rateLimitStore.entries()) {
+    Array.from(rateLimitStore.entries()).forEach(([key, record]) => {
       if (now > record.resetTime) {
         rateLimitStore.delete(key)
       }
-    }
+    })
   }, intervalMs)
 }

@@ -18,6 +18,9 @@ import {
   Download
 } from 'lucide-react'
 
+// Force dynamic rendering
+export const dynamic = 'force-dynamic'
+
 interface HealthStatus {
   status: string
   timestamp: string

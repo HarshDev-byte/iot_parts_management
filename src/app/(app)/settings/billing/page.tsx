@@ -14,7 +14,14 @@ export default async function BillingPage() {
 
   const user = await prisma.user.findUnique({
     where: { id: session.user.id },
-    include: { organization: true },
+    include: { 
+      organization: {
+        include: {
+          users: true,
+          components: true,
+        }
+      }
+    },
   })
 
   if (!user?.organization) {

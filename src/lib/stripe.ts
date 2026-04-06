@@ -3,10 +3,35 @@
 
 import Stripe from 'stripe'
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
-  apiVersion: '2024-12-18.acacia',
-  typescript: true,
-})
+let stripeInstance: Stripe | null = null
+
+function getStripeInstance(): Stripe {
+  if (!stripeInstance) {
+    const apiKey = process.env.STRIPE_SECRET_KEY
+    if (!apiKey) {
+      throw new Error('STRIPE_SECRET_KEY is not configured in environment variables')
+    }
+    
+    stripeInstance = new Stripe(apiKey, {
+      apiVersion: '2026-01-28.clover',
+      typescript: true,
+    })
+  }
+  
+  return stripeInstance
+}
+
+export const stripe = {
+  get checkout() {
+    return getStripeInstance().checkout
+  },
+  get billingPortal() {
+    return getStripeInstance().billingPortal
+  },
+  get webhooks() {
+    return getStripeInstance().webhooks
+  }
+}
 
 export const PLANS = {
   STARTER: {

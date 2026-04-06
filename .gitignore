@@ -54,3 +54,14 @@ logs
 
 # OS
 Thumbs.db
+
+# Temporary test files
+check-users.js
+test-*.js
+verify-*.js
+setup-microsoft-auth.js
+
+# Backup files
+*.backup
+*.bak
+*.old

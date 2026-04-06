@@ -25,6 +25,9 @@ import {
 } from 'lucide-react'
 import { useQuery } from '@tanstack/react-query'
 
+// Force dynamic rendering
+export const dynamic = 'force-dynamic'
+
 export default function SpecialRequestPage() {
   const router = useRouter()
   const [partName, setPartName] = useState('')

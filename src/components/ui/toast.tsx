@@ -29,6 +29,10 @@ const ToastContext = React.createContext<ToastContextValue | undefined>(undefine
 export function ToastProvider({ children }: { children: React.ReactNode }) {
   const [toasts, setToasts] = React.useState<Toast[]>([])
 
+  const removeToast = React.useCallback((id: string) => {
+    setToasts((prev) => prev.filter((toast) => toast.id !== id))
+  }, [])
+
   const addToast = React.useCallback((toast: Omit<Toast, 'id'>) => {
     const id = Math.random().toString(36).substring(7)
     const newToast: Toast = { ...toast, id }
@@ -40,11 +44,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
     setTimeout(() => {
       removeToast(id)
     }, duration)
-  }, [])
-
-  const removeToast = React.useCallback((id: string) => {
-    setToasts((prev) => prev.filter((toast) => toast.id !== id))
-  }, [])
+  }, [removeToast])
 
   return (
     <ToastContext.Provider value={{ toasts, addToast, removeToast }}>
@@ -109,22 +109,4 @@ function ToastItem({ toast, onClose }: { toast: Toast; onClose: () => void }) {
   )
 }
 
-// Helper functions for common toast types
-export const toast = {
-  success: (title: string, description?: string) => {
-    const { addToast } = useToast()
-    addToast({ title, description, variant: 'success' })
-  },
-  error: (title: string, description?: string) => {
-    const { addToast } = useToast()
-    addToast({ title, description, variant: 'error' })
-  },
-  warning: (title: string, description?: string) => {
-    const { addToast } = useToast()
-    addToast({ title, description, variant: 'warning' })
-  },
-  info: (title: string, description?: string) => {
-    const { addToast } = useToast()
-    addToast({ title, description, variant: 'info' })
-  },
-}
+// Export the toast context for use in components

@@ -86,10 +86,10 @@ Visit `http://localhost:3000` 🎉
 
 ## 📚 Documentation
 
-- **[Market-Ready Guide](./MARKET_READY_GUIDE.md)** - Complete feature overview
-- **[Quick Start](./QUICKSTART.md)** - Step-by-step setup
-- **[Deployment Guide](./DEPLOYMENT.md)** - Production deployment
-- **[SaaS Documentation](./README_SAAS.md)** - Detailed SaaS features
+- **[Market-Ready Guide](./docs/MARKET_READY_GUIDE.md)** - Complete feature overview
+- **[Quick Start](./docs/QUICKSTART.md)** - Step-by-step setup
+- **[Deployment Guide](./docs/DEPLOYMENT.md)** - Production deployment
+- **[SaaS Documentation](./docs/README_SAAS.md)** - Detailed SaaS features
 - **[Changelog](./CHANGELOG.md)** - Version history
 
 ## 💰 Pricing
@@ -141,7 +141,7 @@ docker-compose up -d
 ```
 
 ### VPS
-See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions.
+See [Deployment Guide](./docs/DEPLOYMENT.md) for detailed instructions.
 
 ## 🔧 Configuration
 

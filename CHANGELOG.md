@@ -5,6 +5,81 @@ All notable changes to LabInventory will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.1.0] - 2026-01-30 - Enhanced Features & Cleanup 🎯
+
+### Added
+- **Project Management System**
+  - Create and manage projects with flexible date ranges
+  - Link component requests to projects
+  - Auto-calculate duration from start/end dates
+  - Delete projects with verification code protection
+  - Project-based priority system (>6 months = High Priority)
+
+- **Special Parts Request Feature**
+  - Request parts not in inventory
+  - Multiple input methods: Part details OR Product link OR Images
+  - Upload up to 5 product images
+  - Status tracking: PENDING → UNDER_REVIEW → APPROVED/REJECTED → ORDERED → RECEIVED
+  - Students can delete pending requests
+
+- **AI-Powered Inventory Analytics**
+  - Google Gemini AI integration for smart insights
+  - Utilization rate analysis
+  - Stock alerts and predictions
+  - Performance metrics and demand trends
+  - Risk factor identification
+
+- **Enhanced Request System**
+  - Duration in months (6, 12, 18, 24) for projects
+  - Start/end date pickers for single parts
+  - Auto-calculated duration and priority
+  - Purpose field conditional on request type
+  - Component availability badges in search
+
+### Changed
+- **UI/UX Improvements**
+  - Forced dark mode across entire application
+  - Removed gamification features from student dashboard
+  - Simplified lab assistant dashboard
+  - Enhanced component cards with stock indicators
+  - Improved request form with better validation
+
+- **Authentication System**
+  - Cleaned up auth configuration (removed 200+ lines)
+  - Simplified to use actual database user IDs
+  - Fixed sign-in provider configuration
+  - Enhanced error messages and logging
+
+- **Code Quality**
+  - Removed 40+ redundant documentation files
+  - Deleted temporary test scripts
+  - Consolidated documentation into essential files
+  - Cleaned up API routes (260 → 170 lines in requests API)
+  - Improved error handling across the board
+
+### Fixed
+- Student dashboard authentication errors
+- Component creation with organization linking
+- Special request submission validation
+- Lab assistant credentials verification
+- Database schema synchronization
+
+### Removed
+- Temporary test files (check-users.js, test-api.js, etc.)
+- Redundant documentation files
+- Unused gamification components
+- Theme toggle (dark mode only now)
+- Duplicate logo files
+
+### Documentation
+- Updated DEMO_CREDENTIALS.md with all user credentials
+- Enhanced QUICKSTART.md with latest features
+- Improved PRODUCTION_SETUP.md
+- Consolidated feature documentation
+- Added AI_INVENTORY_ANALYTICS.md
+- Added SPECIAL_PARTS_REQUEST_FEATURE.md
+- Added RETURN_SYSTEM_GUIDE.md
+
 ## [3.0.0] - 2026-01-26 - Market-Ready Release 🚀
 
 ### Added - SaaS Features
