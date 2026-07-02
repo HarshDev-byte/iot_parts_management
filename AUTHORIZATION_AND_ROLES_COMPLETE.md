@@ -114,7 +114,7 @@ MICROSOFT_TENANT_ID="405ddc34-d660-46e5-b52d-bfd0be156bb5"
 
 // Redirect URIs
 Development: http://localhost:3000/api/auth/callback/microsoft-entra-id
-Production: https://lab-inventory-siesgst-vercel.app/api/auth/callback/microsoft-entra-id
+Production: https://<your-domain>.vercel.app/api/auth/callback/microsoft-entra-id
 ```
 
 **Provider Setup**:

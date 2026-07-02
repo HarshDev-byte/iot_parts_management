@@ -257,6 +257,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Support
 
 For questions or issues:
-- 📧 Email: support@labinventory.com
-- 💬 Discord: [Join our community](https://discord.gg/labinventory)
-- 🐛 GitHub: [Report an issue](https://github.com/yourusername/labinventory/issues)
+- 🐛 GitHub: [Report an issue](https://github.com/<your-username>/LabInventory_SIESGST/issues)

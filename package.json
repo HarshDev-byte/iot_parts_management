@@ -1,7 +1,7 @@
 {
-  "name": "labinventory",
+  "name": "labinventory-siesgst",
   "version": "3.0.0",
-  "description": "Smart Inventory Management SaaS for Modern Labs - Multi-tenant platform with AI-powered recommendations",
+  "description": "IoT Lab Inventory Management System for SIES Graduate School of Technology",
   "private": true,
   "scripts": {
     "dev": "next dev",

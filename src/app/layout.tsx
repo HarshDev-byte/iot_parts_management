@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   description: 'Streamline your IoT component tracking with AI-powered recommendations, real-time notifications, and automated workflows. Built for educational institutions and research labs.',
   keywords: ['inventory management', 'lab management', 'IoT components', 'education', 'QR code tracking', 'asset management', 'SaaS'],
-  authors: [{ name: 'LabInventory Team' }],
+  authors: [{ name: 'LabInventory' }],
   creator: 'LabInventory',
   metadataBase: new URL(process.env.NEXTAUTH_URL || 'http://localhost:3000'),
   openGraph: {
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: 'LabInventory - Smart Inventory Management',
     description: 'Modern inventory management for educational institutions',
     images: ['/og-image.png'],
-    creator: '@labinventory',
+    creator: '@labinventory', // Update with your own Twitter/X handle
   },
   robots: {
     index: true,

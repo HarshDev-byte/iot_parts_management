@@ -64,7 +64,7 @@
 
 ```bash
 # Clone and install
-git clone https://github.com/yourusername/labinventory.git
+git clone https://github.com/<your-username>/LabInventory_SIESGST.git
 cd labinventory
 npm install
 
@@ -196,18 +196,13 @@ Built with amazing open-source tools:
 
 ## 📞 Support
 
-- 📧 Email: support@labinventory.com
-- 💬 Discord: [Join community](https://discord.gg/labinventory)
-- 📖 Docs: [docs.labinventory.com](https://docs.labinventory.com)
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/labinventory/issues)
+- 🐛 Issues: [GitHub Issues](https://github.com/<your-username>/LabInventory_SIESGST/issues)
 
 ---
 
 <div align="center">
 
-**Built with ❤️ by the LabInventory Team**
-
-[Website](https://labinventory.com) • [Twitter](https://twitter.com/labinventory) • [LinkedIn](https://linkedin.com/company/labinventory)
+**Built for SIES Graduate School of Technology**
 
 ⭐ Star us on GitHub if you find this useful!
 

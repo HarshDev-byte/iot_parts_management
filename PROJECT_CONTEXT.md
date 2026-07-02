@@ -5,8 +5,8 @@
 **Project Name**: SIES GST IoT Lab Inventory Management System  
 **Type**: Full-stack SaaS Web Application  
 **Purpose**: Smart inventory management platform for educational IoT labs with multi-tenant support, hybrid authentication, and real-time tracking  
-**GitHub**: https://github.com/sohamc-codes/LabInventory_SIESGST  
-**Production URL**: https://lab-inventory-siesgst-vercel.app
+**GitHub**: https://github.com/<your-username>/LabInventory_SIESGST  
+**Production URL**: https://<your-domain>.vercel.app
 
 ---
 
@@ -397,7 +397,7 @@ MICROSOFT_TENANT_ID="405ddc34-d660-46e5-b52d-bfd0be156bb5"
 ### **Azure Redirect URIs**
 ```
 http://localhost:3000/api/auth/callback/microsoft-entra-id  (Development)
-https://lab-inventory-siesgst-vercel.app/api/auth/callback/microsoft-entra-id  (Production)
+https://<your-domain>.vercel.app/api/auth/callback/microsoft-entra-id  (Production)
 ```
 
 ---
@@ -613,7 +613,7 @@ npx prisma migrate dev  # Create migration
 
 ## 📞 Support & Contacts
 
-- **GitHub**: https://github.com/sohamc-codes/LabInventory_SIESGST
+- **GitHub**: https://github.com/<your-username>/LabInventory_SIESGST
 - **Issues**: Submit via GitHub Issues
 - **Email**: lab.staff@sies.edu (Lab Assistant account)
 
